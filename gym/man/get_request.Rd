@@ -19,4 +19,12 @@ If the response code is 200 or 204, a parsed response. Else, a server error or r
 \description{
 Submit a GET request to an OpenAI Gym server.
 }
+\examples{
+\dontrun{
+remote_base <- "http://127.0.0.1:5000"
+client <- create_GymClient(remote_base)
+route <- "/v1/envs/"
+get_request(client, route)
+}
+}
 

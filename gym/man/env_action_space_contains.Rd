@@ -19,4 +19,14 @@ A boolean atomic vector of length one indicating if the action is a member of an
 \description{
 Evaluate whether an action is a member of an environments's action space.
 }
+\examples{
+\dontrun{
+remote_base <- "http://127.0.0.1:5000"
+client <- create_GymClient(remote_base)
+env_id <- "CartPole-v0"
+instance_id <- env_create(client, env_id)
+action <- env_action_space_sample(env_id, instance_id)
+env_action_space_contains(client, instance_id, action)
+}
+}
 

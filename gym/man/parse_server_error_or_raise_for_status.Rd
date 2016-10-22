@@ -15,4 +15,11 @@ If the response code is 200 or 204, a parsed response. Else, a server error or r
 \description{
 Parse the server error or raise for status.
 }
+\examples{
+\dontrun{
+b2 <- "http://httpbin.org/post"
+response <- POST(b2, body = "A simple text string")
+parse_server_error_or_raise_for_status(response)
+}
+}
 

@@ -21,4 +21,12 @@ NULL.
 \description{
 Flush all monitor data to disk.
 }
+\examples{
+\dontrun{
+remote_base <- "http://127.0.0.1:5000"
+client <- create_GymClient(remote_base)
+outdir <- "/tmp/random-agent-results"
+upload(client, outdir)
+}
+}
 

@@ -2,6 +2,12 @@
 #'
 #' @param response A response object from \code{httr::POST} or \code{httr::GET}.
 #' @return If the response code is 200 or 204, a parsed response. Else, a server error or raised exception.
+#' @examples
+#' \dontrun{
+#' b2 <- "http://httpbin.org/post"
+#' response <- POST(b2, body = "A simple text string")
+#' parse_server_error_or_raise_for_status(response)
+#' }
 #' @export
 parse_server_error_or_raise_for_status <- function(response) {
   if (httr::status_code(response) == 204) {
@@ -36,6 +42,15 @@ parse_server_error_or_raise_for_status <- function(response) {
 #' @param route The URL path or endpoint.
 #' @param data URL query arguments. Default value is NULL.
 #' @return If the response code is 200 or 204, a parsed response. Else, a server error or raised exception.
+#' @examples
+#' \dontrun{
+#' remote_base <- "http://127.0.0.1:5000"
+#' client <- create_GymClient(remote_base)
+#' route <- "/v1/envs/"
+#' env_id <- "CartPole-v0"
+#' data <- list(env_id = env_id)
+#' post_request(client, route, data)
+#' }
 #' @export
 post_request <- function(x, route, data = NULL) {
   url <- httr::modify_url(x$remote_base, path = route)
@@ -49,6 +64,13 @@ post_request <- function(x, route, data = NULL) {
 #' @param route The URL path or endpoint.
 #' @param data URL query arguments. Default value is NULL.
 #' @return If the response code is 200 or 204, a parsed response. Else, a server error or raised exception.
+#' @examples
+#' \dontrun{
+#' remote_base <- "http://127.0.0.1:5000"
+#' client <- create_GymClient(remote_base)
+#' route <- "/v1/envs/"
+#' get_request(client, route)
+#' }
 #' @export
 get_request <- function(x, route, data = NULL) {
   url <- httr::modify_url(x$remote_base, path = route)

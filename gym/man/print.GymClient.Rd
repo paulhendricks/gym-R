@@ -17,4 +17,11 @@ x A GymClient instance.
 \description{
 Represent a GymClient instance on the command line.
 }
+\examples{
+\dontrun{
+remote_base <- "http://127.0.0.1:5000"
+client <- create_GymClient(remote_base)
+print(client)
+}
+}
 

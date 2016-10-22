@@ -15,4 +15,11 @@ NULL Currently used by the integration tests to repeatedly create and destroy fr
 \description{
 Request a server shutdown.
 }
+\examples{
+\dontrun{
+remote_base <- "http://127.0.0.1:5000"
+client <- create_GymClient(remote_base)
+shutdown_server(client)
+}
+}
 

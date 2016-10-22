@@ -15,4 +15,10 @@ An instance of class "GymClient"; this object has "remote_base" as an attribute.
 \description{
 This function instantiates a GymClient instance to integrate with an OpenAI Gym server.
 }
+\examples{
+\dontrun{
+remote_base <- "http://127.0.0.1:5000"
+client <- create_GymClient(remote_base)
+}
+}
 

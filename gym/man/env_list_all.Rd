@@ -15,4 +15,11 @@ A list mapping instance_id to env_id e.g. \code{list("3c657dbc" = "CartPole-v0")
 \description{
 List all environments running on the server.
 }
+\examples{
+\dontrun{
+remote_base <- "http://127.0.0.1:5000"
+client <- create_GymClient(remote_base)
+env_list_all(client)
+}
+}
 

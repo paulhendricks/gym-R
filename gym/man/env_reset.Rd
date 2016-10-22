@@ -17,4 +17,13 @@ The initial observation of the space.
 \description{
 Reset the state of the environment and return an initial observation.
 }
+\examples{
+\dontrun{
+remote_base <- "http://127.0.0.1:5000"
+client <- create_GymClient(remote_base)
+env_id <- "CartPole-v0"
+instance_id <- env_create(client, env_id)
+env_reset(client, instance_id)
+}
+}
 

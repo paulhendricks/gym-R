@@ -34,7 +34,7 @@ API
 ``` r
 library(gym)
 
-remote_base <- 'http://127.0.0.1:5000'
+remote_base <- "http://127.0.0.1:5000"
 client <- create_GymClient(remote_base)
 print(client)
 

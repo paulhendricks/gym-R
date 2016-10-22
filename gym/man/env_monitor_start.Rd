@@ -23,4 +23,14 @@ NULL.
 \description{
 Start monitoring.
 }
+\examples{
+\dontrun{
+remote_base <- "http://127.0.0.1:5000"
+client <- create_GymClient(remote_base)
+env_id <- "CartPole-v0"
+instance_id <- env_create(client, env_id)
+outdir <- "/tmp/random-agent-results"
+env_monitor_start(client, instance_id, outdir, force = TRUE, resume = FALSE)
+}
+}
 

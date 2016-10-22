@@ -15,4 +15,7 @@ NULL.
 \description{
 A sample random discrete agent.
 }
+\examples{
+agent <- random_discrete_agent(10)
+}
 

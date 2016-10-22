@@ -17,4 +17,12 @@ A short identifier (such as "3c657dbc") for the created environment instance. Th
 \description{
 Create an instance of the specified environment.
 }
+\examples{
+\dontrun{
+remote_base <- "http://127.0.0.1:5000"
+client <- create_GymClient(remote_base)
+env_id <- "CartPole-v0"
+env_create(client, env_id)
+}
+}
 
