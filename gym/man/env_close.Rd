@@ -2,14 +2,19 @@
 % Please edit documentation in R/api.R
 \name{env_close}
 \alias{env_close}
-\title{TO BE EDITED.}
+\title{Flush all monitor data to disk.}
 \usage{
 env_close(x, instance_id)
 }
+\arguments{
+\item{x}{An instance of class "GymClient"; this object has "remote_base" as an attribute.}
+
+\item{instance_id}{A short identifier (such as "3c657dbc") for the environment instance.}
+}
 \value{
-TO BE EDITED.
+NULL.
 }
 \description{
-TO BE EDITED.
+Flush all monitor data to disk.
 }
 

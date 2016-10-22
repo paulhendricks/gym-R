@@ -2,14 +2,19 @@
 % Please edit documentation in R/api.R
 \name{print.GymClient}
 \alias{print.GymClient}
-\title{TO BE EDITED.}
+\title{Represent a GymClient instance on the command line.}
 \usage{
 \method{print}{GymClient}(x, ...)
 }
+\arguments{
+\item{x}{An instance of class "GymClient"; this object has "remote_base" as an attribute.}
+
+\item{...}{Further arguments passed to or from other methods.}
+}
 \value{
-TO BE EDITED.
+x A GymClient instance.
 }
 \description{
-TO BE EDITED.
+Represent a GymClient instance on the command line.
 }
 

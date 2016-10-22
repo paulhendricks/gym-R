@@ -2,14 +2,23 @@
 % Please edit documentation in R/api.R
 \name{env_step}
 \alias{env_step}
-\title{TO BE EDITED.}
+\title{Step though an environment using an action.}
 \usage{
 env_step(x, instance_id, action, render = FALSE)
 }
+\arguments{
+\item{x}{An instance of class "GymClient"; this object has "remote_base" as an attribute.}
+
+\item{instance_id}{A short identifier (such as "3c657dbc") for the environment instance.}
+
+\item{action}{An action to take in the environment.}
+
+\item{render}{Whether to render the environment. Defaults to FALSE.}
+}
 \value{
-TO BE EDITED.
+A list consisting of the following: action; an action to take in the environment, observation; an agent's observation of the current environment, reward; the amount of reward returned after previous action, done; whether the episode has ended, and info; a list containing auxiliary diagnostic information.
 }
 \description{
-TO BE EDITED.
+Step though an environment using an action.
 }
 

@@ -2,14 +2,17 @@
 % Please edit documentation in R/api.R
 \name{shutdown_server}
 \alias{shutdown_server}
-\title{TO BE EDITED.}
+\title{Request a server shutdown.}
 \usage{
 shutdown_server(x)
 }
+\arguments{
+\item{x}{An instance of class "GymClient"; this object has "remote_base" as an attribute.}
+}
 \value{
-TO BE EDITED.
+NULL Currently used by the integration tests to repeatedly create and destroy fresh copies of the server running in a separate thread.
 }
 \description{
-TO BE EDITED.
+Request a server shutdown.
 }
 

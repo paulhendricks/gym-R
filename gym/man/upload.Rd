@@ -4,10 +4,19 @@
 \alias{upload}
 \title{TO BE EDITED.}
 \usage{
-upload(x, training_dir, algorithm_id = NULL, api_key = NULL)
+upload(x, training_dir, api_key = NULL, algorithm_id = NULL)
+}
+\arguments{
+\item{x}{An instance of class "GymClient"; this object has "remote_base" as an attribute.}
+
+\item{training_dir}{A directory containing the results of a training run.}
+
+\item{api_key}{Your OpenAI API key.}
+
+\item{algorithm_id}{An arbitrary string indicating the paricular version of the algorithm (including choices of parameters) you are running.}
 }
 \value{
-TO BE EDITED.
+NULL.
 }
 \description{
 TO BE EDITED.

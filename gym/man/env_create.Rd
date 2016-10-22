@@ -2,14 +2,19 @@
 % Please edit documentation in R/api.R
 \name{env_create}
 \alias{env_create}
-\title{TO BE EDITED.}
+\title{Create an instance of the specified environment.}
 \usage{
 env_create(x, env_id)
 }
+\arguments{
+\item{x}{An instance of class "GymClient"; this object has "remote_base" as an attribute.}
+
+\item{env_id}{A short identifier (such as "3c657dbc") for the created environment instance. The instance_id is used in future API calls to identify the environment to be manipulated.}
+}
 \value{
-TO BE EDITED.
+A short identifier (such as "3c657dbc") for the created environment instance. The instance_id is used in future API calls to identify the environment to be manipulated.
 }
 \description{
-TO BE EDITED.
+Create an instance of the specified environment.
 }
 

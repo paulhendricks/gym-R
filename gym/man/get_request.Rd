@@ -2,14 +2,21 @@
 % Please edit documentation in R/utils.R
 \name{get_request}
 \alias{get_request}
-\title{TO BE EDITED.}
+\title{Submit a GET request to an OpenAI Gym server.}
 \usage{
 get_request(x, route, data = NULL)
 }
+\arguments{
+\item{x}{An instance of class "GymClient"; this object has "remote_base" as an attribute.}
+
+\item{route}{The URL path or endpoint.}
+
+\item{data}{URL query arguments. Default value is NULL.}
+}
 \value{
-TO BE EDITED.
+If the response code is 200 or 204, a parsed response. Else, a server error or raised exception.
 }
 \description{
-TO BE EDITED.
+Submit a GET request to an OpenAI Gym server.
 }
 

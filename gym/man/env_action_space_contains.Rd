@@ -2,14 +2,21 @@
 % Please edit documentation in R/api.R
 \name{env_action_space_contains}
 \alias{env_action_space_contains}
-\title{TO BE EDITED.}
+\title{Evaluate whether an action is a member of an environments's action space.}
 \usage{
 env_action_space_contains(x, instance_id, action)
 }
+\arguments{
+\item{x}{An instance of class "GymClient"; this object has "remote_base" as an attribute.}
+
+\item{instance_id}{A short identifier (such as "3c657dbc") for the environment instance.}
+
+\item{action}{An action to take in the environment.}
+}
 \value{
-TO BE EDITED.
+A boolean atomic vector of length one indicating if the action is a member of an environments's action space.
 }
 \description{
-TO BE EDITED.
+Evaluate whether an action is a member of an environments's action space.
 }
 

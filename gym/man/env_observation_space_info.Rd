@@ -2,14 +2,19 @@
 % Please edit documentation in R/api.R
 \name{env_observation_space_info}
 \alias{env_observation_space_info}
-\title{TO BE EDITED.}
+\title{Get information (name and dimensions/bounds) of the environment's observation space.}
 \usage{
 env_observation_space_info(x, instance_id)
 }
+\arguments{
+\item{x}{An instance of class "GymClient"; this object has "remote_base" as an attribute.}
+
+\item{instance_id}{A short identifier (such as "3c657dbc") for the environment instance.}
+}
 \value{
-TO BE EDITED.
+A list containing "name" (such as "Discrete"), and additional dimensional info (such as "n") which varies from space to space.
 }
 \description{
-TO BE EDITED.
+Get information (name and dimensions/bounds) of the environment's observation space.
 }
 

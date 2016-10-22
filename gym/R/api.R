@@ -1,29 +1,30 @@
-#' TO BE EDITED.
+#' Create a GymClient instance.
 #'
-#' TO BE EDITED.
+#' This function instantiates a GymClient instance to integrate with an OpenAI Gym server.
 #'
-#' @return TO BE EDITED.
+#' @param remote_base The URL of the OpenAI  gym server. This value is usually "http://127.0.0.1:5000".
+#' @return An instance of class "GymClient"; this object has "remote_base" as an attribute.
 #' @export
 create_GymClient <- function(remote_base) {
   structure(list(remote_base = remote_base), class = "GymClient")
 }
 
-#' TO BE EDITED.
+#' Represent a GymClient instance on the command line.
 #'
-#' TO BE EDITED.
-#'
-#' @return TO BE EDITED.
+#' @param x An instance of class "GymClient"; this object has "remote_base" as an attribute.
+#' @param ... Further arguments passed to or from other methods.
+#' @return x A GymClient instance.
 #' @export
 print.GymClient <- function(x, ...) {
   cat("<GymClient: ", x$remote_base, ">\n", sep = "")
   invisible(x)
 }
 
-#' TO BE EDITED.
+#' Create an instance of the specified environment.
 #'
-#' TO BE EDITED.
-#'
-#' @return TO BE EDITED.
+#' @param x An instance of class "GymClient"; this object has "remote_base" as an attribute.
+#' @param env_id A short identifier (such as "3c657dbc") for the created environment instance. The instance_id is used in future API calls to identify the environment to be manipulated.
+#' @return A short identifier (such as "3c657dbc") for the created environment instance. The instance_id is used in future API calls to identify the environment to be manipulated.
 #' @export
 env_create <- function(x, env_id) {
   route <- "/v1/envs/"
@@ -33,11 +34,10 @@ env_create <- function(x, env_id) {
   instance_id
 }
 
-#' TO BE EDITED.
+#' List all environments running on the server.
 #'
-#' TO BE EDITED.
-#'
-#' @return TO BE EDITED.
+#' @param x An instance of class "GymClient"; this object has "remote_base" as an attribute.
+#' @return A list mapping instance_id to env_id e.g. \code{list("3c657dbc" = "CartPole-v0")} for every env on the server.
 #' @export
 env_list_all <- function(x) {
   route <- "/v1/envs/"
@@ -46,11 +46,11 @@ env_list_all <- function(x) {
   all_envs
 }
 
-#' TO BE EDITED.
+#' Reset the state of the environment and return an initial observation.
 #'
-#' TO BE EDITED.
-#'
-#' @return TO BE EDITED.
+#' @param x An instance of class "GymClient"; this object has "remote_base" as an attribute.
+#' @param instance_id A short identifier (such as "3c657dbc") for the environment instance.
+#' @return The initial observation of the space.
 #' @export
 env_reset <- function(x, instance_id) {
   route <- paste0("/v1/envs/", instance_id, "/reset/", sep = "")
@@ -59,11 +59,14 @@ env_reset <- function(x, instance_id) {
   observation
 }
 
-#' TO BE EDITED.
+#' Step though an environment using an action.
 #'
-#' TO BE EDITED.
 #'
-#' @return TO BE EDITED.
+#' @param x An instance of class "GymClient"; this object has "remote_base" as an attribute.
+#' @param instance_id A short identifier (such as "3c657dbc") for the environment instance.
+#' @param action An action to take in the environment.
+#' @param render Whether to render the environment. Defaults to FALSE.
+#' @return A list consisting of the following: action; an action to take in the environment, observation; an agent's observation of the current environment, reward; the amount of reward returned after previous action, done; whether the episode has ended, and info; a list containing auxiliary diagnostic information.
 #' @export
 env_step <- function(x, instance_id, action, render = FALSE) {
   route <- paste0("/v1/envs/", instance_id, "/step/", sep = "")
@@ -79,11 +82,11 @@ env_step <- function(x, instance_id, action, render = FALSE) {
        info = info)
 }
 
-#' TO BE EDITED.
+#' Get information (name and dimensions/bounds) of the environments's action space.
 #'
-#' TO BE EDITED.
-#'
-#' @return TO BE EDITED.
+#' @param x An instance of class "GymClient"; this object has "remote_base" as an attribute.
+#' @param instance_id A short identifier (such as "3c657dbc") for the environment instance.
+#' @return A list containing "name" (such as "Discrete"), and additional dimensional info (such as "n") which varies from space to space.
 #' @export
 env_action_space_info <- function(x, instance_id) {
   route <- paste0("/v1/envs/", instance_id, "/action_space/", sep = "")
@@ -92,11 +95,11 @@ env_action_space_info <- function(x, instance_id) {
   info
 }
 
-#' TO BE EDITED.
+#' Sample an action from the environments's action space.
 #'
-#' TO BE EDITED.
-#'
-#' @return TO BE EDITED.
+#' @param x An instance of class "GymClient"; this object has "remote_base" as an attribute.
+#' @param instance_id A short identifier (such as "3c657dbc") for the environment instance.
+#' @return An action sampled from a space (such as "Discrete"), which varies from space to space.
 #' @export
 env_action_space_sample <- function(x, instance_id) {
   route <- paste0("/v1/envs/", instance_id, "/action_space/sample", sep = "")
@@ -105,11 +108,12 @@ env_action_space_sample <- function(x, instance_id) {
   action
 }
 
-#' TO BE EDITED.
+#' Evaluate whether an action is a member of an environments's action space.
 #'
-#' TO BE EDITED.
-#'
-#' @return TO BE EDITED.
+#' @param x An instance of class "GymClient"; this object has "remote_base" as an attribute.
+#' @param instance_id A short identifier (such as "3c657dbc") for the environment instance.
+#' @param action An action to take in the environment.
+#' @return A boolean atomic vector of length one indicating if the action is a member of an environments's action space.
 #' @export
 env_action_space_contains <- function(x, instance_id, action) {
   route <- paste0("/v1/envs/", instance_id, "/action_space/contains/",
@@ -119,11 +123,11 @@ env_action_space_contains <- function(x, instance_id, action) {
   member
 }
 
-#' TO BE EDITED.
+#' Get information (name and dimensions/bounds) of the environment's observation space.
 #'
-#' TO BE EDITED.
-#'
-#' @return TO BE EDITED.
+#' @param x An instance of class "GymClient"; this object has "remote_base" as an attribute.
+#' @param instance_id A short identifier (such as "3c657dbc") for the environment instance.
+#' @return A list containing "name" (such as "Discrete"), and additional dimensional info (such as "n") which varies from space to space.
 #' @export
 env_observation_space_info <- function(x, instance_id) {
   route <- paste0("/v1/envs/", instance_id, "/observation_space/", sep = "")
@@ -132,11 +136,14 @@ env_observation_space_info <- function(x, instance_id) {
   info
 }
 
-#' TO BE EDITED.
+#' Start monitoring.
 #'
-#' TO BE EDITED.
-#'
-#' @return TO BE EDITED.
+#' @param x An instance of class "GymClient"; this object has "remote_base" as an attribute.
+#' @param instance_id A short identifier (such as "3c657dbc") for the environment instance.
+#' @param directory The directory to write the training data to. Defaults to FALSE.
+#' @param force Clear out existing training data from this directory (by deleting every file prefixed with "openaigym"). Defaults to NULL.
+#' @param resume Retain the training data already in this directory, which will be merged with our new data. Defaults to FALSE.
+#' @return NULL.
 #' @export
 env_monitor_start <- function(x, instance_id, directory, force = FALSE,
                               resume = FALSE) {
@@ -147,11 +154,11 @@ env_monitor_start <- function(x, instance_id, directory, force = FALSE,
   invisible()
 }
 
-#' TO BE EDITED.
+#' Flush all monitor data to disk.
 #'
-#' TO BE EDITED.
-#'
-#' @return TO BE EDITED.
+#' @param x An instance of class "GymClient"; this object has "remote_base" as an attribute.
+#' @param instance_id A short identifier (such as "3c657dbc") for the environment instance.
+#' @return NULL.
 #' @export
 env_monitor_close <- function(x, instance_id) {
   route <- paste0("/v1/envs/", instance_id, "/monitor/close/", sep = "")
@@ -159,11 +166,11 @@ env_monitor_close <- function(x, instance_id) {
   invisible()
 }
 
-#' TO BE EDITED.
+#' Flush all monitor data to disk.
 #'
-#' TO BE EDITED.
-#'
-#' @return TO BE EDITED.
+#' @param x An instance of class "GymClient"; this object has "remote_base" as an attribute.
+#' @param instance_id A short identifier (such as "3c657dbc") for the environment instance.
+#' @return NULL.
 #' @export
 env_close <- function(x, instance_id) {
   route <- paste0("/v1/envs/", instance_id, "/close/", sep = "")
@@ -173,11 +180,13 @@ env_close <- function(x, instance_id) {
 
 #' TO BE EDITED.
 #'
-#' TO BE EDITED.
-#'
-#' @return TO BE EDITED.
+#' @param x An instance of class "GymClient"; this object has "remote_base" as an attribute.
+#' @param training_dir A directory containing the results of a training run.
+#' @param api_key Your OpenAI API key.
+#' @param algorithm_id An arbitrary string indicating the paricular version of the algorithm (including choices of parameters) you are running.
+#' @return NULL.
 #' @export
-upload <- function(x, training_dir, algorithm_id = NULL, api_key = NULL) {
+upload <- function(x, training_dir, api_key = NULL, algorithm_id = NULL) {
   if (is.null(api_key)) {
     api_key <- Sys.getenv("OPENAI_GYM_API_KEY")
   }
@@ -190,11 +199,10 @@ upload <- function(x, training_dir, algorithm_id = NULL, api_key = NULL) {
   invisible()
 }
 
-#' TO BE EDITED.
+#' Request a server shutdown.
 #'
-#' TO BE EDITED.
-#'
-#' @return TO BE EDITED.
+#' @param x An instance of class "GymClient"; this object has "remote_base" as an attribute.
+#' @return NULL Currently used by the integration tests to repeatedly create and destroy fresh copies of the server running in a separate thread.
 #' @export
 shutdown_server <- function(x) {
   route <- "/v1/shutdown/"

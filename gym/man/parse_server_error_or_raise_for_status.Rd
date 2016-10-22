@@ -2,14 +2,17 @@
 % Please edit documentation in R/utils.R
 \name{parse_server_error_or_raise_for_status}
 \alias{parse_server_error_or_raise_for_status}
-\title{TO BE EDITED.}
+\title{Parse the server error or raise for status.}
 \usage{
 parse_server_error_or_raise_for_status(response)
 }
+\arguments{
+\item{response}{A response object from \code{httr::POST} or \code{httr::GET}.}
+}
 \value{
-TO BE EDITED.
+If the response code is 200 or 204, a parsed response. Else, a server error or raised exception.
 }
 \description{
-TO BE EDITED.
+Parse the server error or raise for status.
 }
 

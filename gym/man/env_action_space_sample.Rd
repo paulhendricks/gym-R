@@ -2,14 +2,19 @@
 % Please edit documentation in R/api.R
 \name{env_action_space_sample}
 \alias{env_action_space_sample}
-\title{TO BE EDITED.}
+\title{Sample an action from the environments's action space.}
 \usage{
 env_action_space_sample(x, instance_id)
 }
+\arguments{
+\item{x}{An instance of class "GymClient"; this object has "remote_base" as an attribute.}
+
+\item{instance_id}{A short identifier (such as "3c657dbc") for the environment instance.}
+}
 \value{
-TO BE EDITED.
+An action sampled from a space (such as "Discrete"), which varies from space to space.
 }
 \description{
-TO BE EDITED.
+Sample an action from the environments's action space.
 }
 

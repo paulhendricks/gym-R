@@ -2,14 +2,17 @@
 % Please edit documentation in R/agents.R
 \name{random_discrete_agent}
 \alias{random_discrete_agent}
-\title{TO BE EDITED.}
+\title{A sample random discrete agent.}
 \usage{
 random_discrete_agent(n)
 }
+\arguments{
+\item{n}{The number of discrete action spaces available.}
+}
 \value{
-TO BE EDITED.
+NULL.
 }
 \description{
-TO BE EDITED.
+A sample random discrete agent.
 }
 

@@ -2,14 +2,19 @@
 % Please edit documentation in R/api.R
 \name{env_reset}
 \alias{env_reset}
-\title{TO BE EDITED.}
+\title{Reset the state of the environment and return an initial observation.}
 \usage{
 env_reset(x, instance_id)
 }
+\arguments{
+\item{x}{An instance of class "GymClient"; this object has "remote_base" as an attribute.}
+
+\item{instance_id}{A short identifier (such as "3c657dbc") for the environment instance.}
+}
 \value{
-TO BE EDITED.
+The initial observation of the space.
 }
 \description{
-TO BE EDITED.
+Reset the state of the environment and return an initial observation.
 }
 

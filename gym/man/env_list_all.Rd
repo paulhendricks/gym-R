@@ -2,14 +2,17 @@
 % Please edit documentation in R/api.R
 \name{env_list_all}
 \alias{env_list_all}
-\title{TO BE EDITED.}
+\title{List all environments running on the server.}
 \usage{
 env_list_all(x)
 }
+\arguments{
+\item{x}{An instance of class "GymClient"; this object has "remote_base" as an attribute.}
+}
 \value{
-TO BE EDITED.
+A list mapping instance_id to env_id e.g. \code{list("3c657dbc" = "CartPole-v0")} for every env on the server.
 }
 \description{
-TO BE EDITED.
+List all environments running on the server.
 }
 

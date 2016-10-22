@@ -2,14 +2,17 @@
 % Please edit documentation in R/api.R
 \name{create_GymClient}
 \alias{create_GymClient}
-\title{TO BE EDITED.}
+\title{Create a GymClient instance.}
 \usage{
 create_GymClient(remote_base)
 }
+\arguments{
+\item{remote_base}{The URL of the OpenAI  gym server. This value is usually "http://127.0.0.1:5000".}
+}
 \value{
-TO BE EDITED.
+An instance of class "GymClient"; this object has "remote_base" as an attribute.
 }
 \description{
-TO BE EDITED.
+This function instantiates a GymClient instance to integrate with an OpenAI Gym server.
 }
 

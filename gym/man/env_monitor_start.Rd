@@ -2,14 +2,25 @@
 % Please edit documentation in R/api.R
 \name{env_monitor_start}
 \alias{env_monitor_start}
-\title{TO BE EDITED.}
+\title{Start monitoring.}
 \usage{
 env_monitor_start(x, instance_id, directory, force = FALSE, resume = FALSE)
 }
+\arguments{
+\item{x}{An instance of class "GymClient"; this object has "remote_base" as an attribute.}
+
+\item{instance_id}{A short identifier (such as "3c657dbc") for the environment instance.}
+
+\item{directory}{The directory to write the training data to. Defaults to FALSE.}
+
+\item{force}{Clear out existing training data from this directory (by deleting every file prefixed with "openaigym"). Defaults to NULL.}
+
+\item{resume}{Retain the training data already in this directory, which will be merged with our new data. Defaults to FALSE.}
+}
 \value{
-TO BE EDITED.
+NULL.
 }
 \description{
-TO BE EDITED.
+Start monitoring.
 }
 
