@@ -2,7 +2,7 @@
 % Please edit documentation in R/api.R
 \name{upload}
 \alias{upload}
-\title{TO BE EDITED.}
+\title{Flush all monitor data to disk.}
 \usage{
 upload(x, training_dir, api_key = NULL, algorithm_id = NULL)
 }
@@ -19,6 +19,6 @@ upload(x, training_dir, api_key = NULL, algorithm_id = NULL)
 NULL.
 }
 \description{
-TO BE EDITED.
+Flush all monitor data to disk.
 }
 

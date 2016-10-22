@@ -178,7 +178,7 @@ env_close <- function(x, instance_id) {
   invisible()
 }
 
-#' TO BE EDITED.
+#' Flush all monitor data to disk.
 #'
 #' @param x An instance of class "GymClient"; this object has "remote_base" as an attribute.
 #' @param training_dir A directory containing the results of a training run.
