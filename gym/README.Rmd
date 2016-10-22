@@ -1,29 +1,44 @@
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-gym
-===
+---
+output:
+  md_document:
+    variant: markdown_github
+---
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/gym)](http://cran.r-project.org/package=gym) [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/gym)](http://cran.rstudio.com/package=gym) [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# gym
+
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/gym)](http://cran.r-project.org/package=gym)
+[![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/gym)](http://cran.rstudio.com/package=gym)
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 
 `gym` provides access to the OpenAI Gym API from R.
 
-Installation
-------------
+## Installation
 
 You can install:
 
--   the latest released version from CRAN:
+* the latest released version from CRAN: 
 
-    [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/gym)](http://cran.r-project.org/package=gym)
+    [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/gym)](http://cran.r-project.org/package=gym)
 
-    ``` r
+    ```R
     install.packages("gym")
-    ```
+    ````
 
--   the latest development version from Github:
+* the latest development version from Github: 
 
     [![GitHub version](https://badge.fury.io/gh/paulhendricks%2Fgym.svg)](http://badge.fury.io/gh/paulhendricks%2Fgym)
 
-    ``` r
+    ```R
     if (packageVersion("devtools") < 1.6) {
       install.packages("devtools")
     }
@@ -32,10 +47,9 @@ You can install:
 
 If you encounter a clear bug, please file a minimal reproducible example on [github](https://github.com/paulhendricks/gym/issues).
 
-API
----
+## API
 
-``` r
+```R
 library(gym)
 
 remote_base <- 'http://127.0.0.1:5000'
@@ -78,14 +92,12 @@ for (i in 1:episode_count) {
 env_monitor_close(client, instance_id)
 ```
 
-People
-------
+## People
 
--   The original author of `gym` is [Paul Hendricks](https://github.com/paulhendricks). [![Gratipay](https://img.shields.io/gratipay/JSFiddle.svg)](https://gratipay.com/~paulhendricks/)
+* The original author of `gym` is [Paul Hendricks](https://github.com/paulhendricks). [![Gratipay](https://img.shields.io/gratipay/JSFiddle.svg)](https://gratipay.com/~paulhendricks/)
 
--   The lead maintainer of `gym` is [Paul Hendricks](https://github.com/paulhendricks). [![Gratipay](https://img.shields.io/gratipay/JSFiddle.svg)](https://gratipay.com/~paulhendricks/)
+* The lead maintainer of `gym` is [Paul Hendricks](https://github.com/paulhendricks).  [![Gratipay](https://img.shields.io/gratipay/JSFiddle.svg)](https://gratipay.com/~paulhendricks/)
 
-License
--------
+## License
 
 [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/paulhendricks/gym/blob/master/LICENSE)

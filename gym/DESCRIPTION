@@ -1,0 +1,17 @@
+Package: gym
+Version: 0.1.0
+Title: API to Access OpenAI Gym from R
+Description: Provides API to access OpenAI Gym from R.
+Authors@R: person("Paul", "Hendricks", email = "paul.hendricks.2013@owu.edu", role = c("aut", "cre"))
+License: MIT + file LICENSE
+LazyData: true
+Depends:
+    R (>= 3.3.1)
+Imports:
+    httr,
+    jsonlite
+Suggests:
+    testthat
+URL: https://github.com/paulhendricks/gym
+BugReports: https://github.com/paulhendricks/gym/issues
+RoxygenNote: 5.0.1
