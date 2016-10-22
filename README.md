@@ -13,15 +13,11 @@ You can install:
 
 -   the latest released version from CRAN:
 
-    [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/gym)](http://cran.r-project.org/package=gym)
-
     ``` r
     install.packages("gym")
     ```
 
 -   the latest development version from Github:
-
-    [![GitHub version](https://badge.fury.io/gh/paulhendricks%2Fgym.svg)](http://badge.fury.io/gh/paulhendricks%2Fgym)
 
     ``` r
     if (packageVersion("devtools") < 1.6) {
