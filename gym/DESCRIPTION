@@ -10,6 +10,6 @@ Depends:
 Imports:
     httr,
     jsonlite
-URL: https://github.com/paulhendricks/gym
-BugReports: https://github.com/paulhendricks/gym/issues
+URL: https://github.com/paulhendricks/gym-R
+BugReports: https://github.com/paulhendricks/gym-R/issues
 RoxygenNote: 5.0.1

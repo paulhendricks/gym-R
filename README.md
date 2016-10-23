@@ -2,7 +2,7 @@
 gym
 ===
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/gym)](http://cran.r-project.org/package=gym) [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/gym)](http://cran.rstudio.com/package=gym) [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/gym)](https://cran.rstudio.com/web/packages/gym/index.html) [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/gym)](http://cran.rstudio.com/package=gym) [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 
 `gym` provides access to the OpenAI Gym API from R.
 
@@ -26,7 +26,7 @@ You can install:
     devtools::install_github("paulhendricks/gym-R", subdir = "gym")
     ```
 
-If you encounter a clear bug, please file a minimal reproducible example on [github](https://github.com/paulhendricks/gym/issues).
+If you encounter a clear bug, please file a minimal reproducible example on [github](https://github.com/paulhendricks/gym-R/issues).
 
 API
 ---
@@ -84,4 +84,4 @@ People
 License
 -------
 
-[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/paulhendricks/gym/blob/master/LICENSE)
+[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/paulhendricks/gym-R/blob/master/LICENSE)
