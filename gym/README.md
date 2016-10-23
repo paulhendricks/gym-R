@@ -4,7 +4,7 @@ gym
 
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 
-`gym` provides access to the OpenAI Gym API from R.
+[OpenAI Gym](https://github.com/openai/gym) is a open-source Python toolkit for developing and comparing reinforcement learning algorithms. This R package is a wrapper for the [OpenAI Gym API](https://github.com/openai/gym-http-api), and enables access to an ever-growing variety of environments.
 
 Installation
 ------------
