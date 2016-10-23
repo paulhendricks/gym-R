@@ -1,7 +1,12 @@
 Package: gym
 Version: 0.1.0
-Title: API to Access OpenAI Gym from R
-Description: Provides API to access OpenAI Gym from R.
+Title: Provides Access to the OpenAI Gym API from R
+Description: OpenAI Gym is a open-source Python toolkit for developing and comparing
+    reinforcement learning algorithms. This R package is a wrapper for the
+    OpenAI Gym API, and enables access to an ever-growing variety of environments.
+    For more details on OpenAI Gym, please see here: https://github.com/openai/gym.
+    For more details on the OpenAI Gym API specification, please see here:
+    https://github.com/openai/gym-http-api.
 Authors@R: person("Paul", "Hendricks", email = "paul.hendricks.2013@owu.edu", role = c("aut", "cre"))
 License: MIT + file LICENSE
 LazyData: true
