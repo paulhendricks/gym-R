@@ -2,7 +2,7 @@ Package: gym
 Version: 0.1.0
 Title: Provides Access to the OpenAI Gym API
 Description: OpenAI Gym is a open-source Python toolkit for developing and comparing
-    reinforcement learning algorithms. This R is a wrapper for the OpenAI Gym API,
+    reinforcement learning algorithms. This is a wrapper for the OpenAI Gym API,
     and enables access to an ever-growing variety of environments.
     For more details on OpenAI Gym, please see here: <https://github.com/openai/gym>.
     For more details on the OpenAI Gym API specification, please see here:
