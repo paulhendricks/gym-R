@@ -4,8 +4,8 @@
 \name{gym}
 \alias{gym}
 \alias{gym-package}
-\title{gym: Provides Access to the OpenAI Gym API from R}
+\title{gym: Provides Access to the OpenAI Gym API}
 \description{
-gym: Provides Access to the OpenAI Gym API from R
+gym: Provides Access to the OpenAI Gym API
 }
 

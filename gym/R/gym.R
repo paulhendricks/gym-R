@@ -1,4 +1,4 @@
-#' gym: Provides Access to the OpenAI Gym API from R
+#' gym: Provides Access to the OpenAI Gym API
 #'
 #' @docType package
 #' @name gym

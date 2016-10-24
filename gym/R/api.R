@@ -105,7 +105,7 @@ env_reset <- function(x, instance_id) {
 #' client <- create_GymClient(remote_base)
 #' env_id <- "CartPole-v0"
 #' instance_id <- env_create(client, env_id)
-#' action <- env_action_space_sample(env_id, instance_id)
+#' action <- env_action_space_sample(client, instance_id)
 #' env_step(client, instance_id, action)
 #' }
 #' @export
@@ -134,7 +134,7 @@ env_step <- function(x, instance_id, action, render = FALSE) {
 #' client <- create_GymClient(remote_base)
 #' env_id <- "CartPole-v0"
 #' instance_id <- env_create(client, env_id)
-#' env_action_space_info(env_id, instance_id)
+#' env_action_space_info(client, instance_id)
 #' }
 #' @export
 env_action_space_info <- function(x, instance_id) {
@@ -155,7 +155,7 @@ env_action_space_info <- function(x, instance_id) {
 #' client <- create_GymClient(remote_base)
 #' env_id <- "CartPole-v0"
 #' instance_id <- env_create(client, env_id)
-#' env_action_space_sample(env_id, instance_id)
+#' env_action_space_sample(client, instance_id)
 #' }
 #' @export
 env_action_space_sample <- function(x, instance_id) {
@@ -177,7 +177,7 @@ env_action_space_sample <- function(x, instance_id) {
 #' client <- create_GymClient(remote_base)
 #' env_id <- "CartPole-v0"
 #' instance_id <- env_create(client, env_id)
-#' action <- env_action_space_sample(env_id, instance_id)
+#' action <- env_action_space_sample(client, instance_id)
 #' env_action_space_contains(client, instance_id, action)
 #' }
 #' @export
@@ -200,7 +200,7 @@ env_action_space_contains <- function(x, instance_id, action) {
 #' client <- create_GymClient(remote_base)
 #' env_id <- "CartPole-v0"
 #' instance_id <- env_create(client, env_id)
-#' env_observation_space_info(env_id, instance_id)
+#' env_observation_space_info(client, instance_id)
 #' }
 #' @export
 env_observation_space_info <- function(x, instance_id) {
@@ -247,7 +247,7 @@ env_monitor_start <- function(x, instance_id, directory, force = FALSE, resume =
 #' client <- create_GymClient(remote_base)
 #' env_id <- "CartPole-v0"
 #' instance_id <- env_create(client, env_id)
-#' env_monitor_close(env_id, instance_id)
+#' env_monitor_close(client, instance_id)
 #' }
 #' @export
 env_monitor_close <- function(x, instance_id) {
@@ -267,7 +267,7 @@ env_monitor_close <- function(x, instance_id) {
 #' client <- create_GymClient(remote_base)
 #' env_id <- "CartPole-v0"
 #' instance_id <- env_create(client, env_id)
-#' env_close(env_id, instance_id)
+#' env_close(client, instance_id)
 #' }
 #' @export
 env_close <- function(x, instance_id) {

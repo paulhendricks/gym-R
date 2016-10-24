@@ -23,7 +23,7 @@ remote_base <- "http://127.0.0.1:5000"
 client <- create_GymClient(remote_base)
 env_id <- "CartPole-v0"
 instance_id <- env_create(client, env_id)
-env_observation_space_info(env_id, instance_id)
+env_observation_space_info(client, instance_id)
 }
 }
 
