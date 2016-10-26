@@ -31,6 +31,8 @@ If you encounter a clear bug, please file a minimal reproducible example on [git
 Getting started
 ---------------
 
+### Setting up the server
+
 To download the code and install the requirements, you can run the following shell commands:
 
 ``` bash
@@ -48,6 +50,10 @@ python gym_http_server.py
 ```
 
 For more details, please see here: <https://github.com/openai/gym-http-api>.
+
+### Running an example in R
+
+In a separate R terminal, you can then try running the example agent and see what happens:
 
 ``` r
 library(gym)
