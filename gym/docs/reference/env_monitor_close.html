@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>All news • gym</title>
+<title>Flush all monitor data to disk. — env_monitor_close • gym</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -23,18 +23,21 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
   </head>
 
   <body>
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -49,6 +52,12 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="..//index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li>
@@ -72,66 +81,55 @@
       </header>
 
       <div class="row">
-
-  <div class="col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Change log <small>All releases</small></h1>
+    <h1>Flush all monitor data to disk.</h1>
     </div>
 
-    <div class="contents">
-    <div id="gym-0-1-1" class="section level1">
-<h1 class="hasAnchor">
-<a href="#gym-0-1-1" class="anchor"> </a>gym 0.1.1</h1>
-<div id="improvements" class="section level2">
-<h2 class="hasAnchor">
-<a href="#improvements" class="anchor"> </a>Improvements</h2>
-<ul>
-<li>Improved documentation.</li>
-<li>Added unit tests.</li>
-<li>Added a <code>GymClient</code> function to create instances of the class <code>GymClient</code> e.g. <code>client = GymClient(remote_base)</code>.</li>
-<li>Added Travis CI, Appevyor, and Codecov to ensure code quality.</li>
-</ul>
-</div>
-<div id="bug-fixes" class="section level2">
-<h2 class="hasAnchor">
-<a href="#bug-fixes" class="anchor"> </a>Bug fixes</h2>
-<ul>
-<li>None.</li>
-</ul>
-</div>
-</div>
-    <div id="gym-0-1-0" class="section level1">
-<h1 class="hasAnchor">
-<a href="#gym-0-1-0" class="anchor"> </a>gym 0.1.0</h1>
-<div id="improvements-1" class="section level2">
-<h2 class="hasAnchor">
-<a href="#improvements-1" class="anchor"> </a>Improvements</h2>
-<ul>
-<li>
-<code>gym</code> provides access to current version of OpenAI Gym API.</li>
-</ul>
-</div>
-<div id="bug-fixes-1" class="section level2">
-<h2 class="hasAnchor">
-<a href="#bug-fixes-1" class="anchor"> </a>Bug fixes</h2>
-<ul>
-<li>None.</li>
-</ul>
-</div>
-</div>
-    </div>
+    
+    <p>Flush all monitor data to disk.</p>
+    
+
+    <pre class="usage"><span class='fu'>env_monitor_close</span>(<span class='no'>x</span>, <span class='no'>instance_id</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><p>An instance of class "GymClient"; this object has "remote_base" as an attribute.</p></td>
+    </tr>
+    <tr>
+      <th>instance_id</th>
+      <td><p>A short identifier (such as "3c657dbc") for the environment instance.</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>NULL.</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='no'>remote_base</span> <span class='kw'>&lt;-</span> <span class='st'>"http://127.0.0.1:5000"</span>
+<span class='no'>client</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='create_GymClient.html'>create_GymClient</a></span>(<span class='no'>remote_base</span>)
+<span class='no'>env_id</span> <span class='kw'>&lt;-</span> <span class='st'>"CartPole-v0"</span>
+<span class='no'>instance_id</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='env_create.html'>env_create</a></span>(<span class='no'>client</span>, <span class='no'>env_id</span>)
+<span class='fu'>env_monitor_close</span>(<span class='no'>client</span>, <span class='no'>instance_id</span>)
+<span class='co'># }</span></pre>
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div id="tocnav">
-      <h2>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#gym-0-1-1">0.1.1</a></li>
-        <li><a href="#gym-0-1-0">0.1.0</a></li>
-      </ul>
-    </div>
-  </div>
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
+  </div>
 </div>
 
       <footer>
