@@ -1,32 +1,31 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 gym
 ===
 
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/gym)](http://cran.r-project.org/package=gym) [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/gym)](http://cran.rstudio.com/package=gym) [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 
 [OpenAI Gym](https://github.com/openai/gym) is a open-source Python toolkit for developing and comparing reinforcement learning algorithms. This R package is a wrapper for the [OpenAI Gym API](https://github.com/openai/gym-http-api), and enables access to an ever-growing variety of environments.
 
 Installation
 ------------
 
-You can install:
+You can install the latest development version from CRAN:
 
--   the latest released version from CRAN:
+``` r
+install.packages("gym")
+```
 
-    ``` r
-    install.packages("gym")
-    ```
+Or from GitHub with:
 
--   the latest development version from Github:
+``` r
+if (packageVersion("devtools") < 1.6) {
+  install.packages("devtools")
+}
+devtools::install_github("paulhendricks/gym-R", subdir = "R")
+```
 
-    ``` r
-    if (packageVersion("devtools") < 1.6) {
-      install.packages("devtools")
-    }
-    devtools::install_github("paulhendricks/gym-R", subdir = "gym")
-    ```
-
-If you encounter a clear bug, please file a minimal reproducible example on [github](https://github.com/paulhendricks/gym-R/issues).
+If you encounter a clear bug, please file a [minimal reproducible example](http://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example) on [GitHub](https://github.com/paulhendricks/gym/issues).
 
 Getting started
 ---------------
@@ -98,14 +97,19 @@ for (i in 1:episode_count) {
 env_monitor_close(client, instance_id)
 ```
 
-People
-------
+Citation
+--------
 
--   The original author of `gym` is [Paul Hendricks](https://github.com/paulhendricks). [![Gratipay](https://img.shields.io/gratipay/JSFiddle.svg)](https://gratipay.com/~paulhendricks/)
+To cite package ‘gym’ in publications use:
 
--   The lead maintainer of `gym` is [Paul Hendricks](https://github.com/paulhendricks). [![Gratipay](https://img.shields.io/gratipay/JSFiddle.svg)](https://gratipay.com/~paulhendricks/)
+    Paul Hendricks (2016). gym: Provides Access to the OpenAI Gym API. R package version 0.1.0. https://CRAN.R-project.org/package=gym
 
-License
--------
+A BibTeX entry for LaTeX users is
 
-[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/paulhendricks/gym-R/blob/master/gym/LICENSE)
+    @Manual{,
+      title = {gym: Provides Access to the OpenAI Gym API},
+      author = {Paul Hendricks},
+      year = {2016},
+      note = {R package version 0.1.0},
+      url = {https://CRAN.R-project.org/package=gym},
+    }
