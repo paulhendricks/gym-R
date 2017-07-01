@@ -11,6 +11,22 @@
 #' }
 #' @export
 create_GymClient <- function(remote_base) {
+  GymClient(remote_base)
+}
+
+#' Create a GymClient instance.
+#'
+#' This function instantiates a GymClient instance to integrate with an OpenAI Gym server.
+#'
+#' @param remote_base The URL of the OpenAI  gym server. This value is usually "http://127.0.0.1:5000".
+#' @return An instance of class "GymClient"; this object has "remote_base" as an attribute.
+#' @examples
+#' \dontrun{
+#' remote_base <- "http://127.0.0.1:5000"
+#' client <- GymClient(remote_base)
+#' }
+#' @export
+GymClient <- function(remote_base) {
   structure(list(remote_base = remote_base), class = "GymClient")
 }
 
